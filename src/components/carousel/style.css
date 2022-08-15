@@ -1,0 +1,12 @@
+.texts{
+    text-shadow: 6px 4px 5px #000 !important
+}
+.filtro{
+    filter: blur(3px)
+}
+@media(max-width: 500px){
+    h3{
+        font-size: 20px;
+    }
+    
+}

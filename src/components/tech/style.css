@@ -1,0 +1,185 @@
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* all */
+.all {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.all2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.techs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 25px;
+
+}
+
+.fat {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+@media(max-width:767px) {
+    .techs {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .fat {
+        margin: 25px;
+    }
+}
+@media(max-width:1400px) {
+    .techs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .fat:nth-child(5) {
+        margin-top: 35px;
+    }
+}
+@media(max-width:991px) {
+    .techs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .fat:nth-child(4), .fat:nth-child(5) {
+        margin-top: 35px;
+    }
+}
+
+/* reactjs */
+.fat {
+    position: relative;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+}
+
+.imageIcon {
+    width: 90%;
+    height: 90%;
+}
+
+.fat:before,
+.fat:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 110%;
+    margin: -10%;
+    box-shadow: inset 0 0 0 2px #61dafb;
+    animation: clipMe 3s linear infinite;
+}
+
+.fat:before {
+    animation-delay: -1.5s;
+}
+
+@keyFrames clipMe {
+
+    0%,
+    100% {
+        clip: rect(0, 100px, 2px, 0);
+    }
+
+    25% {
+        clip: rect(0, 2px, 100px, 0)
+    }
+
+    50% {
+        clip: rect(98px, 100px, 100px, 0)
+    }
+
+    75% {
+        clip: rect(0, 100px, 100px, 98px)
+    }
+}
+
+/* typescript */
+
+.fatTs:before,
+.fatTs:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 110%;
+    margin: -10%;
+    box-shadow: inset 0 0 0 2px #007acc;
+    animation: clipMe 3s linear infinite;
+}
+
+.fatTs:before {
+    animation-delay: -1.5s;
+}
+
+/* css */
+
+.fatCss:before,
+.fatCss:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 110%;
+    margin: -10%;
+    box-shadow: inset 0 0 0 2px #1572b6;
+    animation: clipMe 3s linear infinite;
+}
+
+.fatCss:before {
+    animation-delay: -1.5s;
+}
+
+/* libraries */
+/* bootstrap */
+.fatBts:before,
+.fatBts:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 110%;
+    margin: -10%;
+    box-shadow: inset 0 0 0 2px #7c11f8;
+    animation: clipMe 3s linear infinite;
+}
+
+.fatBts:before {
+    animation-delay: -1.5s;
+}
+
+/* style-components */
+.fatStc:before,
+.fatStc:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 110%;
+    margin: -10%;
+    box-shadow: inset 0 0 0 2px #e53933;
+    animation: clipMe 3s linear infinite;
+}
+
+.fatStc:before {
+    animation-delay: -1.5s;
+}
